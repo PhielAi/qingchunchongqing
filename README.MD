@@ -16,9 +16,9 @@ pip install -r requirements.txt
 
 ## 输入自己的账号在 bigstudy.py 的如下位置
 ### 账号/密码/班级
-account=''
-password=''
-your_class=''
+ account=''
+ password=''
+ your_class=''
 
 ## 开始运行
 ![alt text](效果图.png)
