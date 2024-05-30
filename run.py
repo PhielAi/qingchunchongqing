@@ -32,16 +32,19 @@ def get_data():
     
     # 过验证码
     ocr=ddddocr.DdddOcr(use_gpu=True,show_ad=False)
-    img=page.ele('xpath://img[@alt="验证码"]').src()
-    res=ocr.classification(img)
+    if page.ele('xpath://img[@alt="验证码"]'):
+        img=page.ele('xpath://img[@alt="验证码"]').src()
+        res=ocr.classification(img)
 
     # 输入信息
     if page.ele('xpath://input[@placeholder="请输入账号/手机号"]').attr('value') == account:
-        page.ele('xpath://input[@placeholder="请输入验证码"]').input(res)
+        if page.ele('xpath://input[@placeholder="请输入验证码"]'):
+            page.ele('xpath://input[@placeholder="请输入验证码"]').input(res)
         page.ele('xpath://input[@placeholder="请输入密码"]').input(password)
     else:
         page.ele('xpath://input[@placeholder="请输入账号/手机号"]').input(account)
-        page.ele('xpath://input[@placeholder="请输入验证码"]').input(res)
+        if page.ele('xpath://input[@placeholder="请输入验证码"]'):
+            page.ele('xpath://input[@placeholder="请输入验证码"]').input(res)
         page.ele('xpath://input[@placeholder="请输入密码"]').input(password)
     # login
     
