@@ -29,7 +29,7 @@
 
 ##  4、运行程序
 ##### - - 在终端运行
-	python bigstudy.py
+	python run.py
 ##### - - 编辑器运行（如：VS Code）
 	运行 run.py 
 ##### 效果如下
