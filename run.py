@@ -4,14 +4,11 @@ import ddddocr
 import pandas
 import numpy
 import re
-import os
 
 pandas.set_option('display.max_rows', None)  # 显示所有行
 pandas.set_option('display.max_columns', None)  # 显示所有列
 pandas.set_option('display.max_colwidth', None) # 调整列宽
 
-# 更改工作路径(个人习惯，可删，如果遇到问题，改回工作路径即可)
-os.chdir()
 # 名单目录路径(格式看README.MD)
 excel=''
 # 账号/密码/班级
@@ -102,7 +99,7 @@ def get_data():
             break
 
 
-    print('完成人员名单:'+ls)
+    print(f'完成人员名单:{ls}')
     return(ls)
 
 #-----------------------------
